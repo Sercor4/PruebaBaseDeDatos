@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1041471386178",
+    "firebase_url": "https://prueba-b72ce.firebaseio.com",
+    "project_id": "prueba-b72ce",
+    "storage_bucket": "prueba-b72ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041471386178:android:4cc4107cc419a14501b3db",
+        "android_client_info": {
+          "package_name": "com.example.pruebabasededatos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041471386178-pgsd7ot8hj4hmpjne00a2oo5b7e8q0s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN5WzdLw7ZEyDxyDbjw2QCep2QVmLahSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041471386178-pgsd7ot8hj4hmpjne00a2oo5b7e8q0s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
