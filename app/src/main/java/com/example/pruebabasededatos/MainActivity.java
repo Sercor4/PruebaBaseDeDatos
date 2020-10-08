@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
+
+
         reservaFecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,17 +91,23 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 String fechaString = reservaFecha.getText().toString();
-                fecha = ParseFecha(fechaString);
-                Timestamp myDate = new Timestamp(fecha);
                 Hora = etHora.getText().toString();
+                fecha = ParseFecha(fechaString);
 
-                Map<String, Timestamp> updateMap = new HashMap();
+                Log.e(Values.LOG_TAG,"Fecha Parseada : "+fecha);
+                Log.e(Values.LOG_TAG,"HORA : "+Hora);
+                Timestamp myDate = new Timestamp(fecha);
+
+
+                Map<String, Object> updateMap = new HashMap();
                 updateMap.put("Fecha", myDate);
+                updateMap.put("Hora", Hora);
+
 
                 db.collection("Reservas")
                         .document(reserva.getText().toString())
                         .set(updateMap);
-               // db.collection("Reservas").document("Tipo_Reserva").set(Hora);
+
             }
         });
 
@@ -152,6 +160,7 @@ public class MainActivity extends AppCompatActivity  {
 
     public static Date ParseFecha(String fecha)
     {
+
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         Date fechaDate = null;
         try {
